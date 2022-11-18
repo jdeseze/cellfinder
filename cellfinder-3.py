@@ -62,7 +62,7 @@ pos_cells=[]
 x_init=mm.GetMMVariable('Device.Stage.XPosition',0)[2]
 print(x_init)
 y_init=mm.GetMMVariable('Device.Stage.YPosition',0)[2]
-for i in range(-25 ,25):
+for i in range(-25, 25):
     mm.SetMMVariable('Device.Stage.XPosition',x_init+i*step)
     for j in range(-25,25):
         if i%2 ==0:
@@ -88,7 +88,7 @@ for i in range(-25 ,25):
                 if area>4500:
                     y_all,x_all=np.where(label_img==k)
                     dx=np.mean(x_all)-512
-                    dy=-np.mean(y_all)+512
+                    dy=np.mean(y_all)-512
                     print("dx is "+str(dx))
                     z=mm.GetMMVariable('Device.Focus.CurPos',0)
                     pos_cells+=[(x_init+step*i+fact*dx,y_to_go+fact*dy,z[2])]
