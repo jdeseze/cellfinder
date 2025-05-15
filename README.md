@@ -7,3 +7,5 @@ Two parameters should be changed : the step (distance between two images) and th
 
 The principle is simple: the script cellfinder.py scans the coverslip you are looking at, takes pictures and saves positions (and picture) when it finds a cell. 
 The tool select_good_positions.py is a streamlit app to select the cells you want to keep, and it will create a position file, which can be imported in Metamorph or in Micromanager. It should be run using 'streamlit run select_good_positions.py'
+
+It was used for the paper DOI: https://doi.org/10.7554/eLife.93180.4
